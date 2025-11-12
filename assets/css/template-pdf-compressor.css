@@ -1,0 +1,587 @@
+/* ==========================================
+   PDF COMPRESSOR & COMMON TOOL STYLES
+========================================== */
+
+/* Compression Presets */
+.compression-presets {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.preset-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    background: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+}
+
+.preset-btn i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.preset-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--dark-color);
+    margin-bottom: 0.25rem;
+}
+
+.preset-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.preset-compression {
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.preset-btn:hover {
+    border-color: var(--primary-light);
+    background: rgba(37, 99, 235, 0.05);
+    transform: translateY(-2px);
+}
+
+.btn-check:checked + .preset-btn {
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* PDF Info Card */
+.pdf-info-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.info-value {
+    font-size: 1rem;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+/* PDF Preview */
+.pdf-preview-container {
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1rem;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pdf-preview-canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Compression Stats */
+.compression-stats {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+}
+
+.stat-box {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.saved-space {
+    margin-top: 1rem;
+}
+
+/* Success Soft Badge */
+.bg-success-soft {
+    background-color: rgba(22, 163, 74, 0.1) !important;
+    color: #16a34a !important;
+}
+
+/* Danger Soft Badge */
+.bg-danger-soft {
+    background-color: rgba(220, 38, 38, 0.1) !important;
+    color: #dc2626 !important;
+}
+
+/* Use Case Cards (Reusable) */
+.use-case-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: var(--transition);
+    border: 2px solid #e5e7eb;
+    height: 100%;
+}
+
+.use-case-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.use-case-card h5 {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--dark-color);
+}
+
+.use-case-card p {
+    color: var(--text-muted);
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.use-case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-light);
+}
+
+/* Tips List (Reusable) */
+.tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tips-list li {
+    padding: 0.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.tips-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Feature Steps (Reusable) */
+.feature-step {
+    padding: 2rem 1rem;
+}
+
+.step-icon {
+    display: inline-block;
+}
+
+.feature-step h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .compression-stats {
+        padding:
+        1rem;
+    }
+
+    .stat-box {
+        padding: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .preset-btn {
+        padding: 0.875rem;
+    }
+
+    .preset-btn i {
+        font-size: 1.25rem;
+    }
+
+    .pdf-info-card {
+        padding: 1rem;
+    }
+
+    .use-case-card {
+        padding: 1.5rem;
+    }
+
+    .use-case-card i {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .compression-stats .col-auto {
+        width: 100%;
+    }
+
+    .stat-box {
+        margin-bottom: 1rem;
+    }
+
+    .compression-stats .bi-arrow-right {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+}
+
+/* ==========================================
+   LOADING STATE IMPROVEMENTS
+========================================== */
+
+#progressText {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* ==========================================
+   SETTING GROUP (Reusable for all tools)
+========================================== */
+
+.setting-group {
+    margin-bottom: 1.5rem;
+}
+
+.setting-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+}
+
+.setting-label .badge {
+    font-size: 0.7rem;
+    vertical-align: middle;
+}
+
+/* Form Range Improvements */
+.form-range {
+    height: 8px;
+    cursor: pointer;
+}
+
+.form-range::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border: 3px solid var(--white);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
+
+.form-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border: 3px solid var(--white);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
+
+.form-range:focus::-webkit-slider-thumb {
+    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.6);
+}
+
+.form-range:focus::-moz-range-thumb {
+    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.6);
+}
+
+/* ==========================================
+   SUCCESS ICON ANIMATION
+========================================== */
+
+.success-icon {
+    display: inline-block;
+    animation: successPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.success-icon i {
+    font-size: 5rem;
+}
+
+@keyframes successPop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ==========================================
+   CARD HOVER EFFECTS (Reusable)
+========================================== */
+
+.card {
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* ==========================================
+   BUTTON IMPROVEMENTS
+========================================== */
+
+.btn-lg {
+    padding: 0.875rem 2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    border: none;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-outline-danger:hover {
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   ACCORDION IMPROVEMENTS
+========================================== */
+
+.accordion-item {
+    border: 2px solid #e5e7eb;
+    border-radius: 12px !important;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--white);
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--primary-light);
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ==========================================
+   TOOL BREADCRUMB (Reusable)
+========================================== */
+
+.tool-breadcrumb {
+    font-size: 0.9rem;
+}
+
+.tool-breadcrumb a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.tool-breadcrumb a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* ==========================================
+   UPLOAD AREA ENHANCEMENTS
+========================================== */
+
+.upload-area {
+    border: 3px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-light);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, #ffffff 100%);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+}
+
+.upload-area-inner {
+    text-align: center;
+}
+
+.upload-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.upload-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.upload-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+.upload-note {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   RESPONSIVE UTILITIES
+========================================== */
+
+@media (max-width: 992px) {
+    .tool-page-title {
+        font-size: 2rem;
+    }
+
+    .upload-area {
+        padding: 3rem 1.5rem;
+    }
+
+    .upload-title {
+        font-size: 1.5rem;
+    }
+
+    .upload-icon {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .tool-page-title {
+        font-size: 1.5rem;
+    }
+
+    .tool-page-title i {
+        font-size: 1.25rem;
+    }
+
+    .upload-area {
+        padding: 2rem 1rem;
+    }
+
+    .upload-title {
+        font-size: 1.25rem;
+    }
+
+    .upload-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .success-icon i {
+        font-size: 3.5rem;
+    }
+
+    .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 0.75rem !important;
+    }
+
+    .d-flex.gap-3 .btn {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   PRINT STYLES
+========================================== */
+
+@media print {
+    .tool-header,
+    .tool-features,
+    .use-cases,
+    .tool-faq,
+    #uploadArea,
+    #editorArea,
+    #loadingState {
+        display: none !important;
+    }
+}

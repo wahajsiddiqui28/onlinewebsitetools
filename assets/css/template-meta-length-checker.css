@@ -1,0 +1,257 @@
+/* ==========================================
+   META LENGTH CHECKER TOOL
+========================================== */
+
+/* Character Counter */
+.char-counter {
+    font-size: 0.9rem;
+}
+
+.char-counter .fw-bold {
+    font-size: 1.1rem;
+}
+
+/* Progress Bars */
+.progress {
+    background-color: #e5e7eb;
+}
+
+.progress-bar {
+    transition: all 0.3s ease;
+}
+
+.progress-bar.bg-success {
+    background-color: #16a34a !important;
+}
+
+.progress-bar.bg-warning {
+    background-color: #f59e0b !important;
+}
+
+.progress-bar.bg-danger {
+    background-color: #dc2626 !important;
+}
+
+/* Google Preview Container */
+.google-preview-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Google Search Bar Mock */
+.google-search-bar {
+    background: #f8f9fa;
+    padding: 0.875rem 1.25rem;
+    border-radius: 50px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+}
+
+.google-search-bar i {
+    font-size: 1.1rem;
+}
+
+/* Google Result Item */
+.google-result-item {
+    padding: 1rem 0;
+    transition: var(--transition);
+}
+
+.google-result-item.blurred {
+    opacity: 0.4;
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.result-favicon {
+    width: 28px;
+    height: 28px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.result-favicon i {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.result-breadcrumb {
+    font-size: 0.875rem;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+}
+
+.result-title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.preview-link {
+    color: #1a0dab;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.preview-link:hover {
+    text-decoration: underline;
+}
+
+.result-url {
+    font-size: 0.875rem;
+    color: #5f6368;
+    word-break: break-all;
+}
+
+.result-description {
+    font-size: 0.875rem;
+    color: #4d5156;
+    line-height: 1.6;
+}
+
+/* Status Badges */
+.status-item {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.badge.bg-success {
+    background-color: #16a34a !important;
+}
+
+.badge.bg-warning {
+    background-color: #f59e0b !important;
+}
+
+.badge.bg-danger {
+    background-color: #dc2626 !important;
+}
+
+/* Best Practices Cards */
+.practice-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.practice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-light);
+}
+
+.practice-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.practice-icon i {
+    font-size: 1.75rem;
+}
+
+.practice-card h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.practice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.practice-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.practice-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Form Enhancements */
+.form-control:focus,
+.form-control-lg:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+/* Sticky Card */
+.sticky-top {
+    position: sticky;
+    z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .sticky-top {
+        position: relative;
+        top: 0 !important;
+    }
+
+    .google-preview-container {
+        padding: 1.5rem;
+    }
+
+    .result-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .google-preview-container {
+        padding: 1rem;
+    }
+
+    .google-search-bar {
+        padding: 0.75rem 1rem;
+    }
+
+    .result-title {
+        font-size: 1rem;
+    }
+
+    .practice-card {
+        padding: 1.5rem;
+    }
+
+    .practice-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .practice-icon i {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,257 @@
+/* ==========================================
+   META TAG GENERATOR STYLES
+========================================== */
+
+/* Character Counter */
+.char-count {
+    float: right;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-color);
+}
+
+/* Meta Sections */
+.meta-section {
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 1.5rem;
+}
+
+.meta-section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* Code Output */
+.code-output {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+.code-output pre {
+    margin: 0;
+    color: #e2e8f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.code-output code {
+    color: #e2e8f0;
+}
+
+/* Social Preview */
+.social-preview {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.preview-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: #f3f4f6;
+    overflow: hidden;
+}
+
+.preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 4rem;
+}
+
+.preview-content {
+    padding: 1rem;
+}
+
+.preview-url {
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.preview-title-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.preview-description {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Facebook Specific */
+.facebook-preview .preview-title-text {
+    font-size: 1.125rem;
+}
+
+/* Twitter Specific */
+.twitter-preview .preview-image {
+    height: 200px;
+}
+
+.twitter-preview .preview-url {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+/* Preview Title */
+.preview-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Best Practices Cards */
+.practice-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    height: 100%;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.practice-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.practice-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.practice-card h5 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--dark-color);
+}
+
+.practice-card p {
+    font-size: 0.938rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Form Validation */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+    border-color: #198754;
+}
+
+/* Alert Info */
+.alert-info {
+    background-color: rgba(37, 99, 235, 0.1);
+    border-color: rgba(37, 99, 235, 0.2);
+    color: var(--primary-dark);
+}
+
+.alert-info code {
+    background-color: rgba(37, 99, 235, 0.15);
+    color: var(--primary-dark);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+/* Copy Button Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#copyAllBtn:active {
+    animation: pulse 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .char-count {
+        display: block;
+        float: none;
+        margin-top: 0.25rem;
+    }
+
+    .code-output {
+        padding: 1rem;
+    }
+
+    .code-output pre {
+        font-size: 0.75rem;
+    }
+
+    .preview-image {
+        height: 200px;
+    }
+
+    .twitter-preview .preview-image {
+        height: 150px;
+    }
+
+    .practice-card {
+        padding: 1.5rem;
+    }
+
+    .practice-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .preview-title-text {
+        font-size: 0.938rem;
+    }
+
+    .preview-description {
+        font-size: 0.813rem;
+    }
+}

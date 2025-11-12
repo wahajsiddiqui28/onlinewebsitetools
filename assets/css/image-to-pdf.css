@@ -1,0 +1,298 @@
+/* ==========================================
+   IMAGE TO PDF TOOL STYLES
+========================================== */
+
+/* Danger Soft Badge for PDF Tools */
+.bg-danger-soft {
+    background-color: rgba(220, 38, 38, 0.1) !important;
+    color: #dc2626 !important;
+}
+
+.image-preview img {
+    width: 100% !important;
+}
+
+/* Images List */
+.images-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+/* Image Card */
+.image-card {
+    background: var(--white);
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    transition: var(--transition);
+    cursor: move;
+}
+
+.image-card:hover {
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.image-card.dragging {
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+
+.image-card-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+}
+
+.drag-handle {
+    color: #9ca3af;
+    font-size: 1.25rem;
+    cursor: grab;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}
+
+.image-preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f3f4f6;
+    flex-shrink: 0;
+}
+
+.image-preview img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.image-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.image-name {
+    font-weight: 600;
+    color: var(--dark-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.938rem;
+}
+
+.image-size {
+    font-size: 0.813rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.remove-btn {
+    flex-shrink: 0;
+}
+
+/* Settings */
+.setting-group {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.setting-group:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.setting-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 0.938rem;
+}
+
+/* Tips List */
+.tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tips-list li {
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+    color: var(--gray-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.tips-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Success Icon */
+.success-icon {
+    font-size: 5rem;
+    color: #10b981;
+}
+
+.success-icon i {
+    display: inline-block;
+    animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Stat Box */
+.stat-box {
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    min-width: 120px;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Progress Bar */
+.progress {
+    background-color: #e5e7eb;
+    border-radius: 50px;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+/* Use Case Card */
+.use-case-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    height: 100%;
+    border: 2px solid #f3f4f6;
+    transition: var(--transition);
+}
+
+.use-case-card:hover {
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.use-case-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.use-case-card h5 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--dark-color);
+}
+
+.use-case-card p {
+    font-size: 0.938rem;
+    color: var(--gray-color);
+    margin: 0;
+}
+
+/* Custom Scrollbar for Images List */
+.images-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.images-list::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 10px;
+}
+
+.images-list::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+    border-radius: 10px;
+}
+
+.images-list::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .images-list {
+        max-height: 400px;
+    }
+
+    .image-card-inner {
+        padding: 0.5rem;
+        gap: 0.75rem;
+    }
+
+    .image-preview {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-name {
+        font-size: 0.813rem;
+    }
+
+    .image-size {
+        font-size: 0.75rem;
+    }
+
+    .drag-handle {
+        font-size: 1rem;
+    }
+
+    .stat-box {
+        min-width: 100px;
+        padding: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .use-case-card {
+        padding: 1.5rem;
+    }
+
+    .use-case-card i {
+        font-size: 2rem;
+    }
+}
